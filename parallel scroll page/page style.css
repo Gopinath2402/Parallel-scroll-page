@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.firstpag{
+    height: 100vh;
+    width: 100%;
+    background-color:rgba(0,0,0,0.9);
+    overflow: hidden;
+    position: relative;
+    
+}
+.wirewithbulb{
+    position: absolute;
+    top: 0%;
+    transition: 4.5s;
+}
+.wirewithbulb.scrollup{
+    top: -150%;
+}
+
+.title img{
+     width: 150px;
+     height: 100px;
+     position: absolute;
+     top: 109%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     transition: 2.2s;
+}
+.title.scrollup img{
+    top: 50%;
+}
+.top{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    top: 0;
+    padding: 15px;
+    z-index: 100;
+}
+.logo  img{
+    border-radius: 50%;
+}
+.navbar a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+    color:rgba(255, 255, 255,0.2);
+}
+.navbar a::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    left: 0%;
+    background-color: white;
+    bottom: -10px;
+    transition: 0.9s;
+
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+.navbar a::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    overflow-x: hidden;
+    white-space: nowrap;
+    color: hsl(320, 100%, 50%);
+    width: 0;
+    transition: 0.9s;
+}
+.navbar a:hover::before{
+    width: 127.99px;
+}
+
+.navbar a.active::before{
+    width: 127.99px;
+    
+}
+.navbar a.active::after{
+    width: 100%;
+}
+
+ #text.scrollup{
+    fill: white;
+
+} 
+#gasfilling.scrollup{
+fill:yellow;
+}
+
+#filament.scrollup,#leadwire2.scrollup,#leadwire1.scrollup{
+fill: black;
+}
+
+#shadow.scrollup{
+fill: #FCFF32;
+opacity: 40%;
+}
+
+.bulbwithwire{
+    transform-origin:top;
+    transform-box: fill-box;
+    animation: dance 3s alternate  infinite;
+}
+
+@keyframes dance {
+     0%{
+        transform: rotate(20deg);
+    } 
+   100%{
+     transform: rotate(-20deg); 
+    }
+}
+/* #bulbwithwire.scrollup{
+    animation: moveup 1.5s linear forwards;
+}
+@keyframes moveup {
+    100%{
+        transform: translateY(-100%);
+    }
+} */
+
+.secondpag{
+    font-family: 'Fredoka One', cursive;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+p{
+    text-align: justify;
+    line-height: 30px;
+    font-size: 20px;
+}
+.headtext{
+text-transform: uppercase;
+text-decoration: underline;
+}
